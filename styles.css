@@ -1,0 +1,336 @@
+body,
+html {
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.text-catat {
+  color: white;
+  text-decoration: underline;
+  text-underline-position: under;
+  font-weight: 600;
+}
+
+.header img {
+  height: 24px;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 10px;
+  background-color: white;
+  padding: 5px;
+}
+
+.dropdown.transaksi {
+  justify-content: space-between;
+  position: relative;
+  width: 95px;
+}
+
+.select:hover{
+  background-color: #EFEFEF;
+  cursor: pointer;
+}
+
+.form-control {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  width: 91px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.form-control.pilih-tanggal {
+  width: 80px;
+}
+
+.options {
+  font-size: 10px;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+
+.options-open{
+  display: block;
+}
+
+.options-content {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  gap: 5px;
+  width: 95px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: #d9d9d9;
+}
+
+.options-content:hover {
+  background-color: gainsboro;
+}
+
+.options img {
+  height: 13px;
+}
+
+.caret-rotate{
+  transform: rotate(180deg);
+}
+
+.flex-dropdown-catat {
+  display: flex;
+  margin-top: 15px;
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  column-gap: 10px;
+}
+
+.form-nominal {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  margin: auto;
+}
+
+.input-nominal {
+  display: flex;
+  height: 26px;
+}
+
+.input-nominal div {
+  display: flex;
+  background-color: black;
+  color: white;
+  font-size: 10px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  border: white solid;
+}
+
+.inputan-nominal {
+  width: 190px;
+}
+
+.judul-input {
+  font-size: 10px;
+  color: white;
+}
+
+.form-kategori {
+  width: 220px;
+  margin: auto;
+}
+
+.dropdown-kategori {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: white;
+  font-size: 10px;
+  height: 26px;
+}
+
+.form-keterangan {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 220px;
+}
+
+.input-keterangan input[type='text'] {
+  width: 212px;
+  height: 20px;
+}
+
+.input-keterangan input::-webkit-input-placeholder {
+  font-size: 10px;
+  opacity: 50%;
+  padding: 5px;
+}
+
+.form-catat {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-submit input {
+  width: 220px;
+  height: 26px;
+}
+
+.catat-keuangan {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #2e2d2d;
+}
+
+.filter-transaksi {
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d9;
+  padding-bottom: 15px;
+  gap: 20px;
+  display: none;
+}
+
+.filter-open{
+  display: flex;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  width: 210px;
+  margin: auto;
+  font-size: 10px;
+  height: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.flex-col {
+  width: 220px;
+  margin: auto;
+}
+
+.judul-form-tanggal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  width: 210px;
+  margin: auto;
+  font-size: 10px;
+  height: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.box-filter-tanggal {
+  border-style: solid;
+  border-color: white;
+  width: 206px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin: auto;
+}
+
+.judul-transaksi {
+  color: black;
+  background-color: #d9d9d9;
+}
+
+.kategori-riwayat {
+  display: flex;
+  height: 13px;
+  font-size: 10px;
+  justify-content: space-between;
+  width: 200px;
+  margin: auto;
+  padding: 10px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.jenis-riwayat {
+  display: flex;
+  gap: 5px;
+}
+
+.informasi-riwayat {
+  display: flex;
+  font-size: 11px;
+  height: 26px;
+  width: 200px;
+  margin: auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.box-riwayat {
+  width: 220px;
+  margin: auto;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.list-riwayat {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.informasi-nominal {
+  color: #419301;
+}
+
+.dropdown-jenis-transaksi {
+  position: relative;
+}
+
+input[type='text'] {
+  font-size: 10px;
+}
+
+.header-riwayat {
+  background-color: #d9d9d9;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+.filter-button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  font-size: 10px;
+  background-color: #d9d9d9;
+  border-top: 1px solid #2e2d2d;
+  padding: 5px;
+}
+
+@media (min-width: 758px) {
+  .website-catat-keuangan {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+
+  .catat-keuangan {
+    flex-basis: 50%;
+    align-items: center;
+  }
+
+  .section-transaksi {
+    flex-basis: 50%;
+  }
+}

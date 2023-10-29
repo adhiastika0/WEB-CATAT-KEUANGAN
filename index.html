@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/id.js"></script> -->
+    <title>Catat Keuangan</title>
+  </head>
+  <body>
+    <div class="website-catat-keuangan">
+      <div class="catat-keuangan">
+        <div class="header">
+          <img src="assets/icons8-initiate-money-transfer-48.png" alt="" />
+          <div class="text-catat">Catat Keuangan</div>
+          <img src="assets/icons8-request-money-48.png" alt="" />
+        </div>
+        <div class="flex-dropdown-catat">
+          <div class="main-dropdown">
+            <div class="dropdown transaksi select">
+              <div id="selected-jenis-catat" class="selected">
+                Jenis Transaksi
+              </div>
+              <svg
+                class="caret"
+                xmlns="http://www.w3.org/2000/svg"
+                width="5"
+                height="3"
+                viewBox="0 0 5 3"
+                fill="none"
+              >
+                <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
+              </svg>
+            </div>
+            <div class="options">
+              <div class="options-content">
+                <img
+                  src="assets/icons8-initiate-money-transfer-48.png"
+                  alt=""
+                />Pengeluaran
+              </div>
+              <div class="options-content">
+                <img src="assets/icons8-request-money-48.png" alt="" />Pemasukan
+              </div>
+            </div>
+          </div>
+          <input
+            id="input-tanggal-catat"
+            class="form-control"
+            type="date"
+            placeholder="Pilih Tanggal"
+          />
+        </div>
+        <div class="form-catat">
+          <div class="form-nominal">
+            <div class="judul-input">Nominal</div>
+            <div class="input-nominal">
+              <div>Rp</div>
+              <input
+                class="inputan-nominal"
+                type="text"
+                placeholder="Contoh: 10000"
+              />
+            </div>
+          </div>
+          <div class="form-kategori">
+            <div class="judul-input">Kategori</div>
+            <div class="main-dropdown">
+              <div class="dropdown-kategori select">
+                <div id="selected-kategori-catat" class="selected">
+                  Pilih Kategori
+                </div>
+                <svg
+                  class="caret"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="5"
+                  height="3"
+                  viewBox="0 0 5 3"
+                  fill="none"
+                >
+                  <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
+                </svg>
+              </div>
+              <div class="options">
+                <div class="options-content">
+                  <img src="assets/icons8-rice-bowl-48.png" alt="" />Konsumsi
+                </div>
+                <div class="options-content">
+                  <img src="assets/icons8-bus-48.png" alt="" />Transportasi
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-keterangan">
+            <div class="judul-input">Keterangan</div>
+            <div class="input-keterangan">
+              <input
+                type="text"
+                placeholder="Contoh: Beli Makan di Technomart"
+              />
+            </div>
+          </div>
+          <div class="btn-submit">
+            <input type="submit" value="Selesai" onclick="AddData()" />
+          </div>
+        </div>
+      </div>
+      <div class="section-transaksi">
+        <div class="header text-catat header-riwayat judul-transaksi">
+          Riwayat Transaksi
+        </div>
+        <div class="filter-transaksi">
+          <div class="main-dropdown flex-col">
+            <div class="flex-row select">
+              <div class="selected">Jenis Transaksi</div>
+              <svg
+                class="caret"
+                xmlns="http://www.w3.org/2000/svg"
+                width="5"
+                height="3"
+                viewBox="0 0 5 3"
+                fill="none"
+              >
+                <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
+              </svg>
+            </div>
+
+            <div class="options">
+              <div class="options-content">
+                <img
+                  src="assets/icons8-initiate-money-transfer-48.png"
+                  alt=""
+                />Pengeluaran
+              </div>
+              <div class="options-content">
+                <img src="assets/icons8-request-money-48.png" alt="" />Pemasukan
+              </div>
+            </div>
+          </div>
+          <div class="filter-tanggal">
+            <div class="judul-form-tanggal">Pilih Tanggal</div>
+            <div class="box-filter-tanggal">
+              <div class="form-dari dropdown-pilih-tanggal">
+                <div class="judul-input judul-transaksi">Dari</div>
+                <input
+                  class="form-control pilih-tanggal"
+                  type="date"
+                  placeholder="Pilih Tanggal"
+                />
+              </div>
+              <div>
+                <div class="judul-input judul-transaksi">Sampai</div>
+                <input
+                  class="form-control pilih-tanggal"
+                  type="date"
+                  placeholder="Pilih Tanggal"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="main-dropdown flex-col">
+            <div class="flex-row select">
+              <div class="selected">Pilih Kategori</div>
+              <svg
+                class="caret"
+                xmlns="http://www.w3.org/2000/svg"
+                width="5"
+                height="3"
+                viewBox="0 0 5 3"
+                fill="none"
+              >
+                <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
+              </svg>
+            </div>
+
+            <div class="options">
+              <div class="options-content">
+                <img src="assets/icons8-rice-bowl-48.png" alt="" />Konsumsi
+              </div>
+              <div class="options-content">
+                <img src="assets/icons8-bus-48.png" alt="" />Transportasi
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter-button select">
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            width="5"
+            height="3"
+            viewBox="0 0 5 3"
+            fill="none"
+          >
+            <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
+          </svg>
+          <div>Show Filter</div>
+          <svg
+            class="caret"
+            xmlns="http://www.w3.org/2000/svg"
+            width="5"
+            height="3"
+            viewBox="0 0 5 3"
+            fill="none"
+          >
+            <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
+          </svg>
+        </div>
+        <div class="list-riwayat">
+          <div class="box-riwayat">
+            <div class="kategori-riwayat">
+              <div class="jenis-riwayat">
+                <img src="assets/icons8-request-money-48.png" alt="" />
+                <div>Pemasukan</div>
+              </div>
+              <div>20 Agustus 2023</div>
+            </div>
+            <div class="informasi-riwayat">
+              <img src="assets/icons8-rice-bowl-48.png" alt="" />
+              <div>
+                <div>Beli Makanan di Technomart</div>
+                <div class="informasi-nominal">Rp. 10.000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+
+    <!-- <script>
+      flatpickr.localize(flatpickr.l10ns.id);
+      flatpickr('input[type=datetime-local]', {
+        enableTime: false,
+        altInput: true,
+        altFormat: 'j F Y',
+        dateFormat: 'd-m-Y',
+      });
+    </script> -->
+  </body>
+</html>
