@@ -123,24 +123,25 @@
         </div>
         <div class="filter-transaksi">
           <div class="main-dropdown flex-col">
-            <div class="flex-row select">
-              <div class="selected">Jenis Transaksi</div>
-              <svg
-                class="caret"
-                xmlns="http://www.w3.org/2000/svg"
-                width="5"
-                height="3"
-                viewBox="0 0 5 3"
-                fill="none"
-              >
-                <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
-              </svg>
+            <div>
+              <div class="font-filter">Pilih Jenis</div>
+              <div class="flex-row select">
+                <div id="filter-jenis" class="selected">Semua</div>
+                <svg
+                  class="caret"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="5"
+                  height="3"
+                  viewBox="0 0 5 3"
+                  fill="none"
+                >
+                  <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
+                </svg>
+              </div>
             </div>
 
             <div class="options">
-              <div class="options-content">
-                Semua
-              </div>
+              <div class="options-content">Semua</div>
               <div class="options-content">
                 <img
                   src="assets/icons8-initiate-money-transfer-48.png"
@@ -155,40 +156,49 @@
           <div class="filter-tanggal">
             <div class="judul-form-tanggal">Pilih Tanggal</div>
             <div class="box-filter-tanggal">
-              <div class="form-dari dropdown-pilih-tanggal">
-                <div class="judul-input judul-transaksi">Dari</div>
-                <input
-                  class="form-control pilih-tanggal"
-                  type="date"
-                  placeholder="Pilih Tanggal"
-                />
-              </div>
               <div>
-                <div class="judul-input judul-transaksi">Sampai</div>
-                <input
-                  class="form-control pilih-tanggal"
-                  type="date"
-                  placeholder="Pilih Tanggal"
-                />
+                <div class="form-dari dropdown-pilih-tanggal">
+                  <div class="judul-input judul-transaksi">Dari</div>
+                  <input
+                    id="dari"
+                    class="form-control pilih-tanggal"
+                    type="date"
+                    placeholder="Pilih Tanggal"
+                  />
+                </div>
+                <div>
+                  <div class="judul-input judul-transaksi">Sampai</div>
+                  <input
+                    id="sampai"
+                    class="form-control pilih-tanggal"
+                    type="date"
+                    placeholder="Pilih Tanggal"
+                  />
+                </div>
+                <button>tes</button>
               </div>
             </div>
           </div>
           <div class="main-dropdown flex-col">
-            <div class="flex-row select">
-              <div class="selected">Pilih Kategori</div>
-              <svg
-                class="caret"
-                xmlns="http://www.w3.org/2000/svg"
-                width="5"
-                height="3"
-                viewBox="0 0 5 3"
-                fill="none"
-              >
-                <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
-              </svg>
+            <div>
+              <div class="font-filter">Pilih Kategori</div>
+              <div class="flex-row select">
+                <div id="filter-kategori" class="selected">Semua</div>
+                <svg
+                  class="caret"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="5"
+                  height="3"
+                  viewBox="0 0 5 3"
+                  fill="none"
+                >
+                  <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
+                </svg>
+              </div>
             </div>
 
             <div class="options">
+              <div class="options-content">Semua</div>
               <div class="options-content">
                 <img src="assets/icons8-rice-bowl-48.png" alt="" />Konsumsi
               </div>

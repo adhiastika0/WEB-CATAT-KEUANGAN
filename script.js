@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    getTransaksi()
+    getTransaksi();
     const dropdowns = document.querySelectorAll('.main-dropdown');
 
     // Check if any dropdown elements exist
@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 pilihan.addEventListener('click', (event) => {
                     // Use event.target.innerText to get the text of the clicked option
                     selected.innerText = event.target.innerText;
-                    // getTransaksi(selected.innerText)
                     options.classList.remove('options-open');
                     caret.classList.remove('caret-rotate');
+                    getTransaksi()
                 });
             });
         } else {
@@ -40,7 +40,16 @@ document.addEventListener("DOMContentLoaded", function () {
         filter.classList.toggle('filter-open');
 
     })
+    // Add event listeners for filter elements
+    const filterJenis = document.getElementById('filter-jenis');
+    const filterKategori = document.getElementById('filter-kategori');
+    const dariInput = document.getElementById('dari');
+    const sampaiInput = document.getElementById('sampai');
 
+    filterJenis.addEventListener('input', getTransaksi);
+    filterKategori.addEventListener('input', getTransaksi);
+    dariInput.addEventListener('input', getTransaksi);
+    sampaiInput.addEventListener('input', getTransaksi);
 });
 
 function validateForm() {
@@ -117,81 +126,93 @@ function AddData() {
 
 }
 
-function getTransaksi(jenis = "") {
+function getTransaksi() {
     let datas = JSON.parse(localStorage.getItem("transaksiList"))
     let listRiwayat = document.querySelector('.list-riwayat')
+    let filterJenisValue = document.getElementById('filter-jenis').innerText.trim();
+    let filterKategoriValue = document.getElementById('filter-kategori').innerText.trim();
+    let dariDate = document.getElementById('dari').value;
+    let sampaiDate = document.getElementById('sampai').value;
 
     listRiwayat.innerHTML = ""
 
-    // if(datas != null){
-    // let filterDatas = datas.filter(data => data.jenis.includes(jenis == "Semua"? "" : jenis))
+    if (datas != null) {
+        datas.forEach(data => {
+            let isDateInRange = (!dariDate || new Date(data.tanggal) >= new Date(dariDate)) &&
+                (!sampaiDate || new Date(data.tanggal) <= new Date(sampaiDate));            if (
+                
+                (filterJenisValue === "Semua" || data.jenis.includes(filterJenisValue)) && 
+                (filterKategoriValue === "Semua" || data.kategori.includes(filterKategoriValue)) &&
+                isDateInRange
+            ) {
+                // Create the main container div
+                let boxRiwayat = document.createElement('div');
+                boxRiwayat.classList.add('box-riwayat');
 
-    datas.forEach(data => {
-        // Create the main container div
-        let boxRiwayat = document.createElement('div');
-        boxRiwayat.classList.add('box-riwayat');
+                // Create the kategori-riwayat div
+                let kategoriRiwayat = document.createElement('div');
+                kategoriRiwayat.classList.add('kategori-riwayat');
 
-        // Create the kategori-riwayat div
-        let kategoriRiwayat = document.createElement('div');
-        kategoriRiwayat.classList.add('kategori-riwayat');
+                // Create the jenis-riwayat div
+                let jenisRiwayat = document.createElement('div');
+                jenisRiwayat.classList.add('jenis-riwayat');
 
-        // Create the jenis-riwayat div
-        let jenisRiwayat = document.createElement('div');
-        jenisRiwayat.classList.add('jenis-riwayat');
+                let imgJenis = document.createElement('img');
+                if (data.jenis == 'Pemasukan') {
+                    imgJenis.src = 'assets/icons8-request-money-48.png';
+                    imgJenis.alt = '';
+                } else {
+                    imgJenis.src = 'assets/icons8-initiate-money-transfer-48.png';
+                    imgJenis.alt = '';
+                }
 
-        let imgJenis = document.createElement('img');
-        if (data.jenis == 'Pemasukan') {
-            imgJenis.src = 'assets/icons8-request-money-48.png';
-            imgJenis.alt = '';
-        } else {
-            imgJenis.src = 'assets/icons8-initiate-money-transfer-48.png';
-            imgJenis.alt = '';
-        }
+                jenisRiwayat.appendChild(imgJenis);
 
-        jenisRiwayat.appendChild(imgJenis);
+                let jenisText = document.createElement('div');
+                jenisText.textContent = data.jenis;
+                jenisRiwayat.appendChild(jenisText);
 
-        let jenisText = document.createElement('div');
-        jenisText.textContent = data.jenis;
-        jenisRiwayat.appendChild(jenisText);
+                kategoriRiwayat.appendChild(jenisRiwayat);
 
-        kategoriRiwayat.appendChild(jenisRiwayat);
+                let tanggalRiwayat = document.createElement('div');
+                tanggalRiwayat.textContent = data.tanggal;
+                kategoriRiwayat.appendChild(tanggalRiwayat);
 
-        let tanggalRiwayat = document.createElement('div');
-        tanggalRiwayat.textContent = data.tanggal;
-        kategoriRiwayat.appendChild(tanggalRiwayat);
+                boxRiwayat.appendChild(kategoriRiwayat);
 
-        boxRiwayat.appendChild(kategoriRiwayat);
+                // Create the informasi-riwayat div
+                let informasiRiwayat = document.createElement('div');
+                informasiRiwayat.classList.add('informasi-riwayat');
 
-        // Create the informasi-riwayat div
-        let informasiRiwayat = document.createElement('div');
-        informasiRiwayat.classList.add('informasi-riwayat');
+                let imgInformasi = document.createElement('img');
+                if (data.kategori == 'Konsumsi') {
+                    imgInformasi.src = 'assets/icons8-rice-bowl-48.png';
+                    imgInformasi.alt = '';
+                } else {
+                    imgInformasi.src = 'assets/icons8-bus-48.png';
+                    imgInformasi.alt = '';
+                }
+                informasiRiwayat.appendChild(imgInformasi);
 
-        let imgInformasi = document.createElement('img');
-        if (data.kategori == 'Konsumsi') {
-            imgInformasi.src = 'assets/icons8-rice-bowl-48.png';
-            imgInformasi.alt = '';
-        } else {
-            imgInformasi.src = 'assets/icons8-bus-48.png';
-            imgInformasi.alt = '';
-        }
-        informasiRiwayat.appendChild(imgInformasi);
+                let informasiText = document.createElement('div');
+                let informasiJudul = document.createElement('div');
+                informasiJudul.textContent = data.keterangan;
+                informasiText.appendChild(informasiJudul);
 
-        let informasiText = document.createElement('div');
-        let informasiJudul = document.createElement('div');
-        informasiJudul.textContent = data.keterangan;
-        informasiText.appendChild(informasiJudul);
+                let informasiNominal = document.createElement('div');
+                informasiNominal.classList.add('informasi-nominal');
+                informasiNominal.textContent = `Rp. ${data.nominal}`;
+                informasiText.appendChild(informasiNominal);
 
-        let informasiNominal = document.createElement('div');
-        informasiNominal.classList.add('informasi-nominal');
-        informasiNominal.textContent = `Rp. ${data.nominal}`;
-        informasiText.appendChild(informasiNominal);
+                informasiRiwayat.appendChild(informasiText);
 
-        informasiRiwayat.appendChild(informasiText);
+                boxRiwayat.appendChild(informasiRiwayat);
 
-        boxRiwayat.appendChild(informasiRiwayat);
-
-        // Append the created structure to the listRiwayat
-        listRiwayat.appendChild(boxRiwayat);
-    });
+                // Append the created structure to the listRiwayat
+                listRiwayat.appendChild(boxRiwayat);
+                console.log(filterJenisValue)
+                console.log(filterKategoriValue)
+            }
+        });
+    }
 }
-// }
