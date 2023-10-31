@@ -118,120 +118,123 @@
         </div>
       </div>
       <div class="section-transaksi">
-        <div class="header text-catat header-riwayat judul-transaksi">
-          Riwayat Transaksi
-        </div>
-        <div class="filter-transaksi">
-          <div class="main-dropdown flex-col">
-            <div>
-              <div class="font-filter">Pilih Jenis</div>
-              <div class="flex-row select">
-                <div id="filter-jenis" class="selected">Semua</div>
-                <svg
-                  class="caret"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="5"
-                  height="3"
-                  viewBox="0 0 5 3"
-                  fill="none"
-                >
-                  <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
-                </svg>
-              </div>
-            </div>
-
-            <div class="options">
-              <div class="options-content">Semua</div>
-              <div class="options-content">
-                <img
-                  src="assets/icons8-initiate-money-transfer-48.png"
-                  alt=""
-                />Pengeluaran
-              </div>
-              <div class="options-content">
-                <img src="assets/icons8-request-money-48.png" alt="" />Pemasukan
-              </div>
-            </div>
+        <div class="filter">
+          <div class="header text-catat header-riwayat judul-transaksi">
+            Riwayat Transaksi
           </div>
-          <div class="filter-tanggal">
-            <div class="judul-form-tanggal">Pilih Tanggal</div>
-            <div class="box-filter-tanggal">
-              <div class="input-filter-tanggal">
-                <div class="form-dari dropdown-pilih-tanggal">
-                  <div class="judul-input judul-transaksi">Dari</div>
-                  <input
-                    id="dari"
-                    class="form-control pilih-tanggal"
-                    type="date"
-                    placeholder="Pilih Tanggal"
-                  />
-                </div>
-                <div>
-                  <div class="judul-input judul-transaksi">Sampai</div>
-                  <input
-                    id="sampai"
-                    class="form-control pilih-tanggal"
-                    type="date"
-                    placeholder="Pilih Tanggal"
-                  />
+          <div class="filter-transaksi">
+            <div class="main-dropdown flex-col">
+              <div>
+                <div class="font-filter">Pilih Jenis</div>
+                <div class="flex-row select">
+                  <div id="filter-jenis" class="selected">Semua</div>
+                  <svg
+                    class="caret"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5"
+                    height="3"
+                    viewBox="0 0 5 3"
+                    fill="none"
+                  >
+                    <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
+                  </svg>
                 </div>
               </div>
-              <div class="reset-filter-tanggal">
-                <button onclick="resetDateInputs()">Reset Date</button>
+              <div class="options">
+                <div class="options-content">Semua</div>
+                <div class="options-content">
+                  <img
+                    src="assets/icons8-initiate-money-transfer-48.png"
+                    alt=""
+                  />Pengeluaran
+                </div>
+                <div class="options-content">
+                  <img
+                    src="assets/icons8-request-money-48.png"
+                    alt=""
+                  />Pemasukan
+                </div>
+              </div>
+            </div>
+            <div class="filter-tanggal">
+              <div class="judul-form-tanggal">Pilih Tanggal</div>
+              <div class="box-filter-tanggal">
+                <div class="input-filter-tanggal">
+                  <div class="form-dari dropdown-pilih-tanggal">
+                    <div class="judul-input judul-transaksi">Dari</div>
+                    <input
+                      id="dari"
+                      class="form-control pilih-tanggal"
+                      type="date"
+                      placeholder="Pilih Tanggal"
+                    />
+                  </div>
+                  <div>
+                    <div class="judul-input judul-transaksi">Sampai</div>
+                    <input
+                      id="sampai"
+                      class="form-control pilih-tanggal"
+                      type="date"
+                      placeholder="Pilih Tanggal"
+                    />
+                  </div>
+                </div>
+                <div class="reset-filter-tanggal">
+                  <button onclick="resetDateInputs()">Reset Date</button>
+                </div>
+              </div>
+            </div>
+            <div class="main-dropdown flex-col">
+              <div>
+                <div class="font-filter">Pilih Kategori</div>
+                <div class="flex-row select">
+                  <div id="filter-kategori" class="selected">Semua</div>
+                  <svg
+                    class="caret"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5"
+                    height="3"
+                    viewBox="0 0 5 3"
+                    fill="none"
+                  >
+                    <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
+                  </svg>
+                </div>
+              </div>
+              <div class="options">
+                <div class="options-content">Semua</div>
+                <div class="options-content">
+                  <img src="assets/icons8-rice-bowl-48.png" alt="" />Konsumsi
+                </div>
+                <div class="options-content">
+                  <img src="assets/icons8-bus-48.png" alt="" />Transportasi
+                </div>
               </div>
             </div>
           </div>
-          <div class="main-dropdown flex-col">
-            <div>
-              <div class="font-filter">Pilih Kategori</div>
-              <div class="flex-row select">
-                <div id="filter-kategori" class="selected">Semua</div>
-                <svg
-                  class="caret"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="5"
-                  height="3"
-                  viewBox="0 0 5 3"
-                  fill="none"
-                >
-                  <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
-                </svg>
-              </div>
-            </div>
-
-            <div class="options">
-              <div class="options-content">Semua</div>
-              <div class="options-content">
-                <img src="assets/icons8-rice-bowl-48.png" alt="" />Konsumsi
-              </div>
-              <div class="options-content">
-                <img src="assets/icons8-bus-48.png" alt="" />Transportasi
-              </div>
-            </div>
+          <div class="filter-button select">
+            <svg
+              class="caret"
+              xmlns="http://www.w3.org/2000/svg"
+              width="5"
+              height="3"
+              viewBox="0 0 5 3"
+              fill="none"
+            >
+              <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
+            </svg>
+            <div>Show Filter</div>
+            <svg
+              class="caret"
+              xmlns="http://www.w3.org/2000/svg"
+              width="5"
+              height="3"
+              viewBox="0 0 5 3"
+              fill="none"
+            >
+              <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
+            </svg>
           </div>
-        </div>
-        <div class="filter-button select">
-          <svg
-            class="caret"
-            xmlns="http://www.w3.org/2000/svg"
-            width="5"
-            height="3"
-            viewBox="0 0 5 3"
-            fill="none"
-          >
-            <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
-          </svg>
-          <div>Show Filter</div>
-          <svg
-            class="caret"
-            xmlns="http://www.w3.org/2000/svg"
-            width="5"
-            height="3"
-            viewBox="0 0 5 3"
-            fill="none"
-          >
-            <path d="M0 0L2.5 2.5L5 0H0Z" fill="black" />
-          </svg>
         </div>
         <div class="list-riwayat">
           <div class="box-riwayat">

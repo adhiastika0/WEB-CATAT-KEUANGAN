@@ -246,17 +246,17 @@ html {
   gap: 10px;
 }
 
-.reset-filter-tanggal{
+.reset-filter-tanggal {
   display: flex;
   justify-content: center;
 }
 
-.reset-filter-tanggal button{
+.reset-filter-tanggal button {
   width: 220px;
   font-size: 10px;
 }
 
-.input-filter-tanggal{
+.input-filter-tanggal {
   display: flex;
   justify-content: space-between;
 }
@@ -334,9 +334,24 @@ input[type='text'] {
   padding: 5px;
 }
 
-.font-filter{
+.font-filter {
   font-size: 10px;
   padding-bottom: 2px;
+}
+
+.section-transaksi {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter {
+  height: auto;
+}
+
+.list-riwayat {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 70vh;
 }
 
 @media (min-width: 768px) {
@@ -356,5 +371,17 @@ input[type='text'] {
   .section-transaksi {
     flex-basis: 50%;
     margin-left: 50vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filter {
+    height: auto;
+  }
+
+  .list-riwayat {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: none;
   }
 }
