@@ -2,26 +2,20 @@ document.addEventListener("DOMContentLoaded", function () {
     getTransaksi();
     const dropdowns = document.querySelectorAll('.main-dropdown');
 
-    // Check if any dropdown elements exist
     dropdowns.forEach(dropdown => {
         const select = dropdown.querySelector('.select');
         const options = dropdown.querySelector('.options');
         const caret = dropdown.querySelector('.caret');
         const selected = dropdown.querySelector('.selected');
 
-        // Check if the select and options elements exist
         if (select && options) {
-            // Add a click event listener to the select element
             select.addEventListener('click', function () {
-                // Toggle the 'options-open' class to show/hide the options
                 options.classList.toggle('options-open');
                 caret.classList.toggle('caret-rotate');
             });
 
-            // Add a click event listener to each option
             options.querySelectorAll('.options-content').forEach(pilihan => {
                 pilihan.addEventListener('click', (event) => {
-                    // Use event.target.innerText to get the text of the clicked option
                     selected.innerText = event.target.innerText;
                     options.classList.remove('options-open');
                     caret.classList.remove('caret-rotate');
@@ -40,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
         filter.classList.toggle('filter-open');
 
     })
-    // Add event listeners for filter elements
     const filterJenis = document.getElementById('filter-jenis');
     const filterKategori = document.getElementById('filter-kategori');
     const dariInput = document.getElementById('dari');
@@ -145,15 +138,12 @@ function getTransaksi() {
                 (filterKategoriValue === "Semua" || data.kategori.includes(filterKategoriValue)) &&
                 isDateInRange
             ) {
-                // Create the main container div
                 let boxRiwayat = document.createElement('div');
                 boxRiwayat.classList.add('box-riwayat');
 
-                // Create the kategori-riwayat div
                 let kategoriRiwayat = document.createElement('div');
                 kategoriRiwayat.classList.add('kategori-riwayat');
 
-                // Create the jenis-riwayat div
                 let jenisRiwayat = document.createElement('div');
                 jenisRiwayat.classList.add('jenis-riwayat');
 
@@ -180,7 +170,6 @@ function getTransaksi() {
 
                 boxRiwayat.appendChild(kategoriRiwayat);
 
-                // Create the informasi-riwayat div
                 let informasiRiwayat = document.createElement('div');
                 informasiRiwayat.classList.add('informasi-riwayat');
 
@@ -208,11 +197,17 @@ function getTransaksi() {
 
                 boxRiwayat.appendChild(informasiRiwayat);
 
-                // Append the created structure to the listRiwayat
                 listRiwayat.appendChild(boxRiwayat);
                 console.log(filterJenisValue)
                 console.log(filterKategoriValue)
             }
         });
     }
+}
+
+function resetDateInputs() {
+    document.getElementById('dari').value = '';  
+    document.getElementById('sampai').value = '';
+
+    getTransaksi();
 }

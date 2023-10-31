@@ -239,10 +239,26 @@ html {
   border-style: solid;
   border-color: white;
   width: 206px;
-  display: flex;
-  justify-content: space-between;
   padding: 5px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reset-filter-tanggal{
+  display: flex;
+  justify-content: center;
+}
+
+.reset-filter-tanggal button{
+  width: 220px;
+  font-size: 10px;
+}
+
+.input-filter-tanggal{
+  display: flex;
+  justify-content: space-between;
 }
 
 .judul-transaksi {
