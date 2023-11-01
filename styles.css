@@ -312,7 +312,7 @@ html {
   position: relative;
 }
 
-input[type='text'] {
+input {
   font-size: 10px;
 }
 

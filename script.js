@@ -37,12 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
     showFilter.addEventListener('click', () => {
         filter.classList.toggle('filter-open');
         isFilterOpen = !isFilterOpen
-        if(isFilterOpen){
+        if (isFilterOpen) {
             keteranganFilter.innerText = "Hide Filter"
-            for(caret of caretFilter){
+            for (caret of caretFilter) {
                 caret.classList.toggle('caret-rotate')
             }
-        }else{
+        } else {
             keteranganFilter.innerText = "Show Filter"
         }
 
@@ -119,7 +119,7 @@ function AddData() {
 
         transaksiList.push({
             jenis: catatJenisTransaksi.innerText,
-            tanggal: catatTanggal.value,
+            tanggal: new Date(catatTanggal.value).toLocaleString('id-ID', { day: "numeric", month: "long", year: "numeric" }),
             nominal: catatNominal.value,
             kategori: catatKategori.innerText,
             keterangan: catatKeterangan.value
@@ -153,9 +153,9 @@ function getTransaksi() {
     if (datas != null) {
         datas.forEach(data => {
             let isDateInRange = (!dariDate || new Date(data.tanggal) >= new Date(dariDate)) &&
-                (!sampaiDate || new Date(data.tanggal) <= new Date(sampaiDate));            if (
-                
-                (filterJenisValue === "Semua" || data.jenis.includes(filterJenisValue)) && 
+                (!sampaiDate || new Date(data.tanggal) <= new Date(sampaiDate)); if (
+
+                (filterJenisValue === "Semua" || data.jenis.includes(filterJenisValue)) &&
                 (filterKategoriValue === "Semua" || data.kategori.includes(filterKategoriValue)) &&
                 isDateInRange
             ) {
@@ -227,7 +227,7 @@ function getTransaksi() {
 }
 
 function resetDateInputs() {
-    document.getElementById('dari').value = '';  
+    document.getElementById('dari').value = '';
     document.getElementById('sampai').value = '';
 
     getTransaksi();
