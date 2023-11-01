@@ -1,8 +1,8 @@
-#Catat Keuanganmu dengan mudah
+# Catat Keuanganmu dengan mudah
 ![Foto Website](https://s3-alpha-sig.figma.com/img/da43/8b7a/3b63667becaee7bfed52215325d33a45?Expires=1699833600&Signature=RDMGcBGJ6F3E~4GHpGFRji17~5yX65Neda8RXCGoQX-yIKFIhuelvc0JSKwJjGi6a2brOC1JK5ieiLMk2YP-I2~jgEKy2-PHh~6KlKi7TScEboO0i9oxn7c~76x9sNAma8SBOBcRPekWAW~oOxIVvMsi5IB9tDICespoxACN~CyymqH2NFLRWp5lxyYrqlwUdb7o~YqNju92TOBYit2xn-ntpkbxRT72FThXBCjQdkgmw7rLYaqMqH7lj8Fw6iphq95rN4s7tzwrC0fKeNvVeQg~mMSgcQbwraxkLLiUR5SiNKlLRS0bs~VKqPUO5RVcGaChH16WWGI12L6tTJqX7w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4 'Website Catat Keuangan')
 Website ini hadir untuk membantu kamu mencatat alur keuangan dengan mudah
 
-##Fitur
+## Fitur
 
 1. Kamu dapat mencatat keuanganmu dengan mudah dengan cara mengisi form sesuai dengan informasi keuangan yang ingin kamu catat
 2. Kamu dapat melacak alur keuanganmu dengan mudah menggunakan fitur filter
@@ -11,5 +11,5 @@ Website ini hadir untuk membantu kamu mencatat alur keuangan dengan mudah
 3. Kamu dapat mengakses website ini dimana saja dan kapan saja melalui smartphone
    ![Akses Dari Smartphone](https://s3-alpha-sig.figma.com/img/49a4/9afc/0d3f93de0bb45dd06a22a5b37a9736ea?Expires=1699833600&Signature=iVWx8hOXNehkAcEQoYy-cv5gkZNS6Xn7qCmsdsCfMzsQdfjq8o6QlQhFmH50DxoN3As4kJrXsGZDi2Nv5RFsUz0q68vmSuyvqtoWMuZ4xJpxgMMek5-p0rlyA6qu~vOdPr60X9P-fYaDrbnB0Y~z2cE0xTHJnH~iiJhyijOckJkAcOO56Y6bKwqn7s5CDqV4HNI2eWzj2ThGh9fQqSBxEbT2oSMSrHWc9-22v7YLIpk2XWn2N3Bbp5Ww4DP93u~UPtJFup9HKInhReRNXPMKMFxFxM0dvT0R9FfsClJ9Cd0bcK71kCYVx~BHCHhUjHHqCAwNOEIv1isHMKPv8VNcPA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4 'Akses dengan mudah melalui smartphone')
 
-##Proses Development
+## Proses Development
 ![Proses Development](https://s3-alpha-sig.figma.com/img/ca0f/8d27/78ebd5ebde74c4a4f02b73805506f166?Expires=1699833600&Signature=g87OGDy93UMd6ZUx~AdZc8iq-c2xPeeBFdtlKQyG~QgoZoaLtTm0f~-4KywayW9hdFhLq1uQRk02TxgbH8lW2hVw8WMFpA5CoBr2eYVZFOOy0jnqwc4l1zEGq~s-e8xb67G59rTPNKWrd7iuB6yYRbbtFQc2EUMIrwwK-4gVo4dXl93MMePzEI2RaG-7QuMuX3uQ1i5V2qqVqut6ptrhF0L2BuZ2u60iqMQAyRyLWyw7rq6wD1ipQUj9yd23kNag7L9fWJpx0r8zhR2gDgbIzDEcsqv7xUN~SMAvR51taeBwJnc8rPXaMF2q8irqx8q3ZX38~~PMJsLDAMocfBtQLg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4 'Proses development web')
