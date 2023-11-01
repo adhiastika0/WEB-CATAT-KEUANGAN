@@ -29,9 +29,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const showFilter = document.querySelector('.filter-button')
     const filter = document.querySelector('.filter-transaksi')
+    const keteranganFilter = document.getElementById('keterangan-tombol-filter')
+    let isFilterOpen = false
+    const caretFilter = document.getElementsByClassName('filter-caret')
+    console.log(caretFilter)
 
     showFilter.addEventListener('click', () => {
         filter.classList.toggle('filter-open');
+        isFilterOpen = !isFilterOpen
+        if(isFilterOpen){
+            keteranganFilter.innerText = "Hide Filter"
+            for(caret of caretFilter){
+                caret.classList.toggle('caret-rotate')
+            }
+        }else{
+            keteranganFilter.innerText = "Show Filter"
+        }
 
     })
     const filterJenis = document.getElementById('filter-jenis');
