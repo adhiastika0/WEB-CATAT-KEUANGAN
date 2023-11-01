@@ -104,11 +104,11 @@ function validateForm() {
 
 function AddData() {
     if (validateForm() == true) {
-        let catatJenisTransaksi = document.getElementById('selected-jenis-catat').innerText;
-        let catatKategori = document.getElementById('selected-kategori-catat').innerText;
-        let catatTanggal = document.getElementById('input-tanggal-catat').value;
-        let catatNominal = document.querySelector('.inputan-nominal').value;
-        let catatKeterangan = document.querySelector('.inputan-keterangan').value;
+        let catatJenisTransaksi = document.getElementById('selected-jenis-catat');
+        let catatKategori = document.getElementById('selected-kategori-catat');
+        let catatTanggal = document.getElementById('input-tanggal-catat');
+        let catatNominal = document.querySelector('.inputan-nominal');
+        let catatKeterangan = document.querySelector('.inputan-keterangan');
 
         let transaksiList;
         if (localStorage.getItem("transaksiList") == null) {
@@ -118,16 +118,24 @@ function AddData() {
         }
 
         transaksiList.push({
-            jenis: catatJenisTransaksi,
-            tanggal: catatTanggal,
-            nominal: catatNominal,
-            kategori: catatKategori,
-            keterangan: catatKeterangan
+            jenis: catatJenisTransaksi.innerText,
+            tanggal: catatTanggal.value,
+            nominal: catatNominal.value,
+            kategori: catatKategori.innerText,
+            keterangan: catatKeterangan.value
         });
 
 
         localStorage.setItem("transaksiList", JSON.stringify(transaksiList));
         getTransaksi()
+
+        catatJenisTransaksi.innerText = "Jenis Transaksi"
+        catatTanggal.value = ""
+        catatNominal.value = ""
+        catatKategori.innerText = "Pilih Kategori"
+        catatKeterangan.value = ""
+
+
     }
 
 }
