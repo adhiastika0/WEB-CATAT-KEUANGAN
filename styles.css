@@ -161,7 +161,7 @@ html {
   height: 20px;
 }
 
-.input-keterangan input::-webkit-input-placeholder {
+input::-webkit-input-placeholder {
   font-size: 10px;
   opacity: 50%;
   padding: 5px;

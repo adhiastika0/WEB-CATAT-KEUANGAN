@@ -153,8 +153,8 @@ function getTransaksi() {
     if (datas != null) {
         datas.forEach(data => {
             let isDateInRange = (!dariDate || new Date(data.tanggal) >= new Date(dariDate)) &&
-                (!sampaiDate || new Date(data.tanggal) <= new Date(sampaiDate)); if (
-
+                (!sampaiDate || new Date(data.tanggal) <= new Date(sampaiDate));
+            if (
                 (filterJenisValue === "Semua" || data.jenis.includes(filterJenisValue)) &&
                 (filterKategoriValue === "Semua" || data.kategori.includes(filterKategoriValue)) &&
                 isDateInRange
@@ -211,7 +211,13 @@ function getTransaksi() {
 
                 let informasiNominal = document.createElement('div');
                 informasiNominal.classList.add('informasi-nominal');
+
+                // Ganti dengan warna berdasarkan jenis transaksi
+                let color = (data.jenis === "Pemasukan") ? "#419301" : (data.jenis === "Pengeluaran") ? "#D90000" : null;
+
+                informasiNominal.style.color = color;
                 informasiNominal.textContent = `Rp. ${data.nominal}`;
+
                 informasiText.appendChild(informasiNominal);
 
                 informasiRiwayat.appendChild(informasiText);
